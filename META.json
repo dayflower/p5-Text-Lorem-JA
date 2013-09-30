@@ -1,7 +1,7 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Japanese Lorem Ipsum generator",
    "author" : [
-      "ITO Nobuaki <daydream.trippers@gmail.com>"
+      "ITO Nobuaki <dayflower@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v0.7.0, CPAN::Meta::Converter version 2.120921",
@@ -52,5 +52,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/dayflower/p5-Text-Lorem-JA/issues"
+      },
+      "homepage" : "https://github.com/dayflower/p5-Text-Lorem-JA",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/dayflower/p5-Text-Lorem-JA.git",
+         "web" : "https://github.com/dayflower/p5-Text-Lorem-JA"
+      }
+   },
    "version" : "0.01"
 }

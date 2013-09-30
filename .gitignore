@@ -24,3 +24,9 @@ cover_db/
 MYMETA.*
 
 Text-Lorem-JA-*
+
+gen/local/
+gen/cpanfile.snapshot
+gen/download/
+gen/text/
+
