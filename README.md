@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/dayflower/p5-Text-Lorem-JA.png?branch=master)](https://travis-ci.org/dayflower/p5-Text-Lorem-JA)
 # NAME
 
 Text::Lorem::JA - Japanese Lorem Ipsum generator
