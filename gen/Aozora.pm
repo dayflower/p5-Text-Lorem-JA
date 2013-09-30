@@ -242,7 +242,7 @@ sub extract {
         die;
     }
 
-    my $cmdline = "unzip -xqc $archive $target 2>/dev/null";
+    my $cmdline = "unzip -xqc $archive $target";
 
     open my $pipe, '-|', $cmdline  or die $!;
     binmode $pipe, ":encoding($encoding)"  or die $!;
@@ -282,7 +282,10 @@ sub run {
     while (my $line = <$source>) {
         $manager->input($line);
     }
-    close $source;
+    unless (close $source) {
+        unlink $output_file;
+        die "I think pipe open (unzip) failed: $!";
+    }
 
     $manager->finish();
 

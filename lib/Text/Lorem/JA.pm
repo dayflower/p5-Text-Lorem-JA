@@ -298,6 +298,7 @@ sub _load_dict_from_stream {
 
     while (my $line = &$sub_getline()) {
         chomp $line;
+        next if $line =~ /^#/o;     # comment line
 
         if ($step == 0) {
             # chain

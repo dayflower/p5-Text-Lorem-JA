@@ -1,3 +1,6 @@
+# This dictionary is built from following out-of-copyright articles.
+# - "学問の自由" by 寺田 寅彦 on http://www.aozora.gr.jp/cards/000042/card43535.html
+# - "劇の好きな子供たちへ" by 岸田 国士 on http://www.aozora.gr.jp/cards/001154/card44814.html
 2
 
 学問
