@@ -75,6 +75,10 @@ Most of instance methods can be called as class methods.
 
     Generates sentences.
 
+# TOOL
+
+You can use [lorem\_jp](http://search.cpan.org/perldoc?lorem\_jp) executable for generating Japanese Lorem text from CLI.
+
 # LICENSE
 
 Copyright (C) ITO Nobuaki.
