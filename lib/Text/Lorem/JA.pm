@@ -467,7 +467,7 @@ Generates sentences.
 
 =head1 TOOL
 
-You can use L<lorem_jp> executable for generating Japanese Lorem text from CLI.
+You can use L<lorem_ja> executable for generating Japanese Lorem text from CLI.
 
 =head1 LICENSE
 
