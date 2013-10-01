@@ -410,7 +410,7 @@ Text::Lorem::JA - Japanese Lorem Ipsum generator
 
 =head1 DESCRIPTION
 
-Text::Lorem::JA generates fake Japanese text.
+Text::Lorem::JA generates fake Japanese text via Markov chain.
 
 =head1 METHODS
 
@@ -429,15 +429,18 @@ Can specify dictionary file and chains for generating sentences.
 
 =item C<word>
 
-    $word = $lorem->word(10);
+    print Encode::encode_utf8( $lorem->word(10) );
+    # => 好きな強みとを考えて
 
-Generates a exact given length string.
+Returns a exact given length string.
+Generated strings (by all methods) are in Perl's internal format (Unicode).
 
-Length is in Unicode characters.  Not bytes.
+Argument length represents number of Unicode characters.  Not bytes.
 
 =item C<words>
 
-    $words = $lorem->words(10);
+    print Encode::encode_utf8( $lorem->words(10) );
+    # => 主要な素質にしばしばあるまいまではっきりつかまえる
 
 Generates a string composed from morphemes of given number.
 
@@ -445,13 +448,18 @@ At Japanese language, words are not delimited by whitespaces in normal style.
 
 =item C<sentence>
 
-    $sentence = $lorem->sentence();
+    print Encode::encode_utf8( $lorem->sentence() );
+    # => 科学者自身が、自分たちでつくるのが、もしもかなりな資産家であった。
 
 Generates a single sentence.
 
 =item C<sentences>
 
-    $sentences = $lorem->sentences(3);
+    print Encode::encode_utf8( $lorem->sentences(3) );
+    # => いちばん面白いいい方をはっきりさせない会社があっても、
+    #    やがてかわって、許されない。人物の生きている、ほこり、
+    #    品位のあらわれである。文明社会は、正しくそういう立場に
+    #    いながら、求めて一塊の岩礁に膠着してみる。
 
 Generates sentences.
 
