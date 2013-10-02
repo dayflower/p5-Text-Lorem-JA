@@ -17,6 +17,7 @@
       "directory" : [
          "t",
          "xt",
+         "gen",
          "inc",
          "share",
          "eg",
