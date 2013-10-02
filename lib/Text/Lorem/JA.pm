@@ -8,7 +8,7 @@ use File::Basename qw( dirname );
 use File::Spec::Functions qw( catdir catfile canonpath );
 use Cwd qw( abs_path );
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 use constant DICTIONARY_DIR =>
     canonpath(catdir(dirname(__FILE__), '..', '..', '..', 'data'));

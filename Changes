@@ -2,6 +2,11 @@ Revision history for Perl extension Text-Lorem-JA
 
 {{$NEXT}}
 
+0.03 2013-10-02T03:14:33Z
+
+    - Improved document
+    - no_index for dictionary generators
+
 0.02 2013-10-01T02:52:51Z
 
     - Documented `lorem_ja` executable
