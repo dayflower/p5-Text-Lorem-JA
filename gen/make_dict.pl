@@ -4,7 +4,7 @@
 
 =head1 NAME
 
-make_dict.pl
+make_dict.pl - Dictionary generator
 
 =head1 SYNOPSIS
 

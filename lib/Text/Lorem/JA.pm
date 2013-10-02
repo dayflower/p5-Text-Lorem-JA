@@ -397,16 +397,26 @@ Text::Lorem::JA - Japanese Lorem Ipsum generator
 
     use Text::Lorem::JA;
     
+    # Generated text are represented in Perl internal format (Unicode).
+    binmode \*STDOUT, ':encoding(UTF-8)';
+    
     my $lorem = Text::Lorem::JA->new();
     
-    # Generate a string of text with 10 characters
-    my $words = $lorem->word(10);
+    # Generate a string of text with 10 characters.
+    print $lorem->word(10), "\n";
+    # => 好きな強みとを考えて
     
-    # Generate a string of text with 2 tokens
-    my $words = $lorem->words(2);
+    # Generate a string of text with 10 tokens.
+    print $lorem->words(10), "\n";
+    # => 主要な素質にしばしばあるまいまではっきりつかまえる
     
-    # Generate a string of text with 2 sentences
-    my $sentences = $lorem->sentences(2);
+    # Generate a string of text with 3 sentences.
+    # Invoking via class methods are also allowed.
+    print Text::Lorem::JA->sentences(3), "\n";
+    # => いちばん面白いいい方をはっきりさせない会社があっても、
+    #    やがてかわって、許されない。人物の生きている、ほこり、
+    #    品位のあらわれである。文明社会は、正しくそういう立場に
+    #    いながら、求めて一塊の岩礁に膠着してみる。
 
 =head1 DESCRIPTION
 
@@ -415,6 +425,7 @@ Text::Lorem::JA generates fake Japanese text via Markov chain.
 =head1 METHODS
 
 Most of instance methods can be called as class methods.
+Generated strings are in Perl's internal format (Unicode).
 
 =over 4
 
@@ -429,18 +440,15 @@ Can specify dictionary file and chains for generating sentences.
 
 =item C<word>
 
-    print Encode::encode_utf8( $lorem->word(10) );
-    # => 好きな強みとを考えて
+    $word = $lorem->word($length);
 
-Returns a exact given length string.
-Generated strings (by all methods) are in Perl's internal format (Unicode).
+Returns a exact given C<$length> string.
 
 Argument length represents number of Unicode characters.  Not bytes.
 
 =item C<words>
 
-    print Encode::encode_utf8( $lorem->words(10) );
-    # => 主要な素質にしばしばあるまいまではっきりつかまえる
+    $words = $lorem->words($number_of_morphems);
 
 Generates a string composed from morphemes of given number.
 
@@ -448,18 +456,13 @@ At Japanese language, words are not delimited by whitespaces in normal style.
 
 =item C<sentence>
 
-    print Encode::encode_utf8( $lorem->sentence() );
-    # => 科学者自身が、自分たちでつくるのが、もしもかなりな資産家であった。
+    $sentence = $lorem->sentence();
 
 Generates a single sentence.
 
 =item C<sentences>
 
-    print Encode::encode_utf8( $lorem->sentences(3) );
-    # => いちばん面白いいい方をはっきりさせない会社があっても、
-    #    やがてかわって、許されない。人物の生きている、ほこり、
-    #    品位のあらわれである。文明社会は、正しくそういう立場に
-    #    いながら、求めて一塊の岩礁に膠着してみる。
+    $sentences = $lorem->sentences($number_of_sentences);
 
 Generates sentences.
 
