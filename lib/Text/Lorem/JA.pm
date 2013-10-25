@@ -11,7 +11,7 @@ use Cwd qw( abs_path );
 our $VERSION = "0.03";
 
 use constant DICTIONARY_DIR =>
-    canonpath(catdir(dirname(__FILE__), '..', '..', '..', 'data'));
+    canonpath(catdir(dirname(__FILE__), '..', '..', '..', 'auto', 'share', 'dist', 'Text-Lorem-JA'));
 use constant DEFAULT_DICTIONARY =>
     catdir(DICTIONARY_DIR, 'dict.txt');
 

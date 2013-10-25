@@ -7,7 +7,7 @@ define PREPEND_COMMENT
 endef
 export PREPEND_COMMENT
 
-DICT:=		../data/dict.txt
+DICT:=		../share/dict.txt
 
 target:		$(DICT)
 
