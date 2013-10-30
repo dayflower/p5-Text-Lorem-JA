@@ -2,6 +2,9 @@ Revision history for Perl extension Text-Lorem-JA
 
 {{$NEXT}}
 
+0.04 2013-10-30T12:33:00Z
+    - Dictionary file was moved to share directory
+
 0.03 2013-10-02T03:14:33Z
 
     - Improved document
